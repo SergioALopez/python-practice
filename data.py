@@ -22,3 +22,17 @@ print(f"{person['name']} is {person['age']} years old.")
 person["job"] = "developer"
 print(person)
 
+# LIST COMPREHENSIONS - build lists in one line
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Old way
+evens = []
+for n in numbers:
+	if n % 2 == 0:
+		evens.append(n)
+
+# Python way - same result in one line
+evens_faster = [n for n in numbers if n % 2 == 0]
+
+print(evens)
+print(evens_faster)
