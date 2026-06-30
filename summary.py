@@ -40,9 +40,9 @@ def print_old_young(students):
 	print(f"Youngest age -> {youngest}")
 	for s in students:
 		if s['age'] == str(oldest):
-			print(f"\noldest student -> {s}")
+			print(f"\noldest student -> {s['name']}, age: {s['age']}")
 		if s['age'] == str(youngest):
-			print(f"youngest student -> {s}")
+			print(f"youngest student -> {s['name']}, age: {s['age']}")
 
 students = read_students("students.csv")
 if students:
