@@ -9,5 +9,7 @@ students = [
 # Your turn: use min() with a lambda to find the student
 # with the best grade (alphabetically first)
 best_student = min(students, key=lambda s: s["grade"])
+worst_student = max(students, key=lambda s: s["grade"])
 
 print(f"Best grade: {best_student['name']} with grade {best_student['grade']}")
+print(f"Worst grade: {worst_student['name']} with grade {worst_student['grade']}")
