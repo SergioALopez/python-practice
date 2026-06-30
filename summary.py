@@ -27,6 +27,24 @@ def print_summary(students):
 	for s in students:
 		print(f"{s['name']} - Age {s['age']} - Grade {s['grade']}")
 
+def print_old_young(students):
+	oldest = 0
+	youngest = 100
+	ages = [int(s["age"]) for s in students]
+	for age in ages:
+		if age > oldest:
+			oldest = age
+		if age < youngest:
+			youngest = age
+	print(f"Oldest age -> {oldest}")
+	print(f"Youngest age -> {youngest}")
+	for s in students:
+		if s['age'] == str(oldest):
+			print(f"\noldest student -> {s}")
+		if s['age'] == str(youngest):
+			print(f"youngest student -> {s}")
+
 students = read_students("students.csv")
 if students:
 	print_summary(students)
+	print_old_young(students)
